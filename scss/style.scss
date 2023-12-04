@@ -1,1 +1,307 @@
 @import "reset";
+
+$main-font: "Exo 2";
+$additional-font: "PT Sans";
+$main-color: #363738;
+$additional-color: #6b6b6c;
+$border: 3px solid #ffce50;
+
+@mixin center-element() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-text {
+  color: $additional-color;
+  font-family: $additional-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.section__card-title {
+  color: $main-color;
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 135%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-top: 110px;
+}
+
+.hero__wrapper {
+  @include center-element();
+}
+
+.hero__title {
+  max-width: 610px;
+  color: $main-color;
+  font-family: $main-font;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.hero__text {
+  margin-top: 45px;
+  max-width: 525px;
+}
+
+.hero__link {
+  margin-top: 40px;
+  a {
+    color: $main-color;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: $border;
+    }
+  }
+}
+
+.hero__bg {
+  width: 635px;
+  height: 510px;
+  background-image: url("../images/hero-bg\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.features {
+  margin-top: 67px;
+}
+
+.features__wrapper {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  padding: 40px 125px 56px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 228px);
+  column-gap: 170px;
+  place-content: center;
+  .feature__block {
+    position: relative;
+    .features__block-title {
+      margin-top: 24px;
+    }
+
+    .features__text {
+      margin-top: 16px;
+    }
+  }
+}
+
+.line--block::before {
+  content: "";
+  position: absolute;
+  left: -64px;
+  width: 1px;
+  height: 261px;
+  background: #d7d7dd;
+}
+
+.benefits {
+  background-image: url("../images/benfits-bg\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  margin-top: 67px;
+  .benfits__wrapper {
+    max-width: 769px;
+    background-image: url("../images/Rectangle\ 8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 178px 0 166px 90px;
+
+    .benefits__title {
+      max-width: 362px;
+      color: #fff;
+      font-family: $main-color;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 125%;
+    }
+  }
+}
+
+.benefits-item {
+  margin-top: 72px;
+}
+.benefits-item__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 447px);
+  gap: 64px 140px;
+  place-content: center;
+  .benefits-item__block {
+    display: flex;
+    gap: 0 40px;
+    .features-item__text {
+      margin-top: 14px;
+    }
+  }
+}
+
+.works {
+  margin-top: 120px;
+}
+.works__title {
+  color: $main-color;
+  font-family: $main-font;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.works__text {
+  max-width: 466px;
+  margin-top: 32px;
+}
+
+.works__content {
+  @include center-element();
+
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+
+.works__block {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+}
+
+.works__block-item {
+  padding: 24px 70px 32px 32px;
+}
+
+.works__block-text {
+  max-width: 291px;
+  margin-top: 16px;
+}
+.works__price {
+  max-width: 92px;
+  display: block;
+  color: $main-color;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 135%;
+  margin-top: 32px;
+  &:hover {
+    border-bottom: $border;
+  }
+}
+
+.clients {
+  margin-top: 212px;
+}
+.clients__wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: #0b7572;
+  padding: 85px 66px 85px 81px;
+  .clients__title {
+    max-width: 447px;
+    color: #fff;
+    font-family: $main-font;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .clients__content {
+    border-radius: 8px;
+    background: #fff;
+    padding: 28px 32px 40px 32px;
+    .clients_header {
+      @include center-element();
+
+      .clients__info {
+        max-width: 274px;
+        color: $additional-color;
+        font-family: $additional-font;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+    .clients__line {
+      margin-top: 32px;
+      max-width: 100%;
+      height: 1px;
+      background: #d7d7dd;
+    }
+
+    table {
+      margin-top: 32px;
+      border-collapse: collapse;
+      th {
+        color: #fff;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+        background-color: #0b7572;
+        padding: 10px 45px;
+      }
+      tr {
+        td {
+          vertical-align: middle;
+          padding: 24px 16px;
+          .table__text {
+            max-width: 112px;
+            color: $additional-color;
+            font-family: $additional-font;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 135%;
+            margin-top: 10px;
+          }
+          .table__price {
+            display: block;
+            color: $main-color;
+            font-family: $main-font;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 135%;
+            margin-top: 10px;
+          }
+          .table__title {
+            max-width: 134px;
+            color: $main-color;
+            font-family: $additional-font;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 135%;
+          }
+          .table__stars {
+            margin-top: 12px;
+            .fa-regular {
+              color: #ffce50;
+            }
+          }
+          .table__num {
+            color: $main-color;
+            font-family: $additional-font;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 135%;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "media";
